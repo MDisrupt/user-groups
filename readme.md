@@ -28,3 +28,8 @@ Other commands are available in `package.json`
 yarn dev # development server
 yarn build # production build
 ```
+
+> **notice**: When running in development, the first call to the api may reset state.
+              This is a side-effect of next's lazy building; when loading new api
+              endpoints, the file is-reevaluated, and the state is reset. This may
+              manifest as development-only bugs, but _does not happed in production_.
